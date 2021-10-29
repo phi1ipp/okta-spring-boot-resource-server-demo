@@ -29,7 +29,7 @@ class MyController {
 
 	@GetMapping("/protected")
 	fun protected(@AuthenticationPrincipal jwt: Jwt): String {
-		return "Hello, ${jwt.getSubject()}!"
+		return "Hello, ${jwt.subject}!"
 	}
 }
 
